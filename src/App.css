@@ -1,0 +1,30 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+  transition: background 0.3s ease;
+  position: relative;
+  overflow-x: hidden;
+}
+
+:root[data-theme="dark"] .app {
+  background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
+}
+
+main {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default margin/padding */
+body {
+  margin: 0;
+  padding: 0;
+}
