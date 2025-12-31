@@ -1,4 +1,5 @@
 node_modules/
+dist/
 .dist/
 build/
 platforms/
@@ -7,3 +8,5 @@ www/platforms/
 *.log
 .DS_Store
 Thumbs.db
+tsconfig.tsbuildinfo
+*.local

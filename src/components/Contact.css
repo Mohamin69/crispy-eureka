@@ -1,0 +1,132 @@
+.contact {
+  padding: 4rem 2rem;
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+
+:root[data-theme="dark"] .contact {
+  background-color: #1f2937;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-container h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+  transition: color 0.3s ease;
+}
+
+:root[data-theme="dark"] .contact-container h2 {
+  color: #f3f4f6;
+}
+
+.contact-subtitle {
+  text-align: center;
+  color: #6b7280;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  transition: color 0.3s ease;
+}
+
+:root[data-theme="dark"] .contact-subtitle {
+  color: #d1d5db;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-item h4 {
+  font-size: 1.2rem;
+  color: #f59e0b;
+  margin-bottom: 0.5rem;
+}
+
+.info-item p {
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0.25rem 0;
+  transition: color 0.3s ease;
+}
+
+:root[data-theme="dark"] .info-item p {
+  color: #d1d5db;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  background-color: white;
+  color: #1f2937;
+}
+
+:root[data-theme="dark"] .contact-form input,
+:root[data-theme="dark"] .contact-form textarea {
+  background-color: #374151;
+  color: #f3f4f6;
+  border-color: #4b5563;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 2rem 1rem;
+  }
+
+  .contact-container h2 {
+    font-size: 2rem;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
