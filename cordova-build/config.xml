@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget id="com.hamzabeauty.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>HAMZA Beauty</name>
+    <description>Handpicked cosmetics — quality you can trust</description>
+    <author email="support@hamzabeauty.com" href="https://hamzabeauty.com">HAMZA Beauty</author>
+    
+    <content src="index.html" />
+    
+    <preference name="phonegap-version" value="cli-12.0.0" />
+    <preference name="orientation" value="portrait" />
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="false" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="preloaded-modules" value="phonegap-nfc" />
+    <preference name="android-minSdkVersion" value="21" />
+    <preference name="android-targetSdkVersion" value="31" />
+    <preference name="android-build-tool" value="31.0.0" />
+    <preference name="StatusBarStyle" value="default" />
+    <preference name="ShowSplashScreenSpinner" value="true" />
+    
+    <!-- Allow all origins; restrict as needed for security -->
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    
+    <!-- Core Plugins -->
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-statusbar" spec="2" />
+    <plugin name="cordova-plugin-device" spec="2" />
+    
+    <!-- Platform-specific settings -->
+    <platform name="android">
+        <icon src="www/images/hamza-logo.svg" density="xhdpi" />
+        <icon src="www/images/hamza-logo.svg" density="hdpi" />
+        <icon src="www/images/hamza-logo.svg" density="mdpi" />
+        <splash src="www/images/cosmetics-on-pink-table.jpg" density="port-mdpi" />
+    </platform>
+    
+    <!-- Permissions -->
+    <permission name="android.permission.INTERNET" />
+</widget>

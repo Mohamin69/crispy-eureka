@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<title>HAMZA Beauty</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="hamza.css" />
+	</head>
+	<body>
+		<canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+		<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+			<div class="container">
+				<a class="navbar-brand d-flex align-items-center" href="#">
+					<img src="images/hamza-logo.svg" alt="HAMZA" class="brand-logo-img" />
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navMenu">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+						<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+						<li class="nav-item me-2">
+							<button id="themeToggleBtn" class="btn btn-theme-toggle" title="Toggle theme" aria-label="Toggle theme"></button>
+						</li>
+						<li class="nav-item ms-2">
+							<a class="nav-link btn btn-warning text-dark px-3 py-1" href="#" id="authBtn" style="border-radius:6px;">Log In</a>
+						</li>
+						<li class="nav-item dropdown d-none" id="userDropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" id="userMenuLabel">User</a>
+							<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenuLabel">
+								<li><a class="dropdown-item" href="#" id="logoutBtn">Sign Out</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<header class="hero bg-light py-5">
+			<div class="container text-center">
+				<div>
+					<h1 class="display-5">Handpicked cosmetics — quality you can trust</h1>
+					<p class="lead text-muted">Locally stocked in Tamale, Ghana</p>
+				</div>
+			</div>
+		</header>
+
+		<main class="container my-5">
+			<section id="carouselSection">
+				<div class="d-flex justify-content-between align-items-center mb-3">
+					<h2 class="h4">Available Cosmetics</h2>
+					<div class="text-muted">Prices shown in GHS</div>
+				</div>
+
+				<div id="shoesCarousel" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="images/cosmetics-on-pink-table.jpg" loading="lazy" class="d-block w-100" alt="Nivea Lotion">
+							<div class="carousel-caption d-none d-md-block product-caption">
+								<h5>Nivea Body Lotion</h5>
+								<p class="price">GHS 45 • In stock</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="images/Dove_facial_products_1200x900.jpg" loading="lazy" class="d-block w-100" alt="Nivea Cream">
+							<div class="carousel-caption d-none d-md-block product-caption">
+								<h5>Nivea Intensive Cream</h5>
+								<p class="price">GHS 30 • In stock</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="images/doveproducts-600_GqrxFYf.jpg" loading="lazy" class="d-block w-100" alt="Dove Spray">
+							<div class="carousel-caption d-none d-md-block product-caption">
+								<h5>Dove Body Spray</h5>
+								<p class="price">GHS 28 • In stock</p>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#shoesCarousel" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#shoesCarousel" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</section>
+
+			<section class="my-5">
+				<h3 class="h5 mb-3">Quick shop</h3>
+				<div class="row g-3">
+					<div class="col-md-4">
+						<div class="card product-card">
+						  <img src="images/cosmetics-on-pink-table.jpg" loading="lazy" class="card-img-top" alt="Nivea Body Lotion">
+							<div class="card-body">
+								<h5 class="card-title">Nivea Body Lotion</h5>
+								<p class="card-text price mb-2">GHS 45</p>
+								<p class="small text-muted mb-2">Lightweight daily moisturizer that restores softness and helps prevent dryness.</p>
+								<div class="mb-2">
+									<span class="badge bg-light text-dark me-1">Hydrating</span>
+									<span class="badge bg-light text-dark">Normal • Dry</span>
+								</div>
+								<a href="#" class="btn btn-outline-primary btn-sm open-details" data-name="Nivea Body Lotion" data-price="GHS 45" data-desc="Moisturizing body lotion for soft skin." data-img="images/cosmetics-on-pink-table.jpg" data-uses="Daily moisturizing|Soothes dry areas|After-shower use" data-effects="Restores surface hydration and softness without greasy residue." data-directions="Apply liberally to damp skin after showering. Massage until absorbed." data-ingredients="Aqua, glycerin, emollients, mild fragrance" data-size="400ml">Details</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card product-card">
+						  <img src="images/Dove_facial_products_1200x900.jpg" loading="lazy" class="card-img-top" alt="Nivea Intensive Cream">
+							<div class="card-body">
+								<h5 class="card-title">Nivea Intensive Cream</h5>
+								<p class="card-text price mb-2">GHS 30</p>
+								<p class="small text-muted mb-2">Rich cream for extra dry or flaky areas — delivers long-lasting barrier support.</p>
+								<div class="mb-2">
+									<span class="badge bg-light text-dark me-1">Deep Care</span>
+									<span class="badge bg-light text-dark">Very Dry</span>
+								</div>
+								<a href="#" class="btn btn-outline-primary btn-sm open-details" data-name="Nivea Intensive Cream" data-price="GHS 30" data-desc="Deep care cream for dry skin." data-img="images/Dove_facial_products_1200x900.jpg" data-uses="Spot treatment for very dry patches|Night repair for hands and feet" data-effects="Creates an occlusive layer that locks in moisture and supports skin repair overnight." data-directions="Apply a small amount to affected areas; for intense care use overnight." data-ingredients="Emollients, occlusives, humectants" data-size="150ml">Details</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card product-card">
+						  <img src="images/doveproducts-600_GqrxFYf.jpg" loading="lazy" class="card-img-top" alt="Dove Body Spray">
+							<div class="card-body">
+								<h5 class="card-title">Dove Body Spray</h5>
+								<p class="card-text price mb-2">GHS 28</p>
+								<p class="small text-muted mb-2">Light, refreshing body mist to keep you feeling fresh between washes.</p>
+								<div class="mb-2">
+									<span class="badge bg-light text-dark me-1">Fragrance</span>
+									<span class="badge bg-light text-dark">All skin types</span>
+								</div>
+								<a href="#" class="btn btn-outline-primary btn-sm open-details" data-name="Dove Body Spray" data-price="GHS 28" data-desc="Long-lasting fresh fragrance." data-img="images/doveproducts-600_GqrxFYf.jpg" data-uses="Quick refresh|Post-workout spray" data-effects="Provides temporary fragrance; not an antiperspirant." data-directions="Spray from about 15 cm onto pulse points or clothes. Avoid broken or irritated skin." data-ingredients="Alcohol denat., fragrance, water" data-size="150ml">Details</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Additional information sections -->
+		<section class="container my-5 info-section" id="about">
+			<h3 class="h4 mb-3">About HAMZA Beauty</h3>
+			<p class="text-muted">HAMZA Beauty curates affordable, everyday personal care products selected for gentle performance and broad skin compatibility. We source trusted brands and stock items locally to reduce wait times for customers in Tamale and surrounding areas.</p>
+			<div class="row mt-4">
+				<div class="col-md-6">
+					<h5>Our Promise</h5>
+					<p>We prioritise products with balanced formulations — effective hydration, non-irritating fragrances, and clear ingredient labeling. If you have sensitive skin, check the ingredients list and perform a patch test.</p>
+				</div>
+				<div class="col-md-6">
+					<h5>Sourcing & Quality</h5>
+					<p>Products are sourced from established distributors and inspected on arrival. Where available we provide ingredient and usage guidance to help you choose the right item for your skin type.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="container my-5 info-section" id="how-it-works">
+			<h3 class="h4 mb-3">How to choose and use</h3>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card p-3">
+						<h6 class="mb-2">Identify your skin needs</h6>
+						<p class="small text-muted">Look for 'hydrating' if you feel tightness, or 'non-comedogenic' if you are prone to breakouts.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card p-3">
+						<h6 class="mb-2">Follow directions</h6>
+						<p class="small text-muted">Apply lotions on damp skin, creams to dry patches at night, and sprays from a short distance onto clothing or pulse points.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card p-3">
+						<h6 class="mb-2">Patch test new items</h6>
+						<p class="small text-muted">Apply a small amount to the inner forearm for 24 hours to check for reactions before wide use.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container my-5 info-section" id="safety">
+			<h3 class="h4 mb-3">Ingredients & Safety</h3>
+			<p class="text-muted">We list common active ingredients and explanations so you can make informed choices. If you have a known allergy, always check ingredient lists carefully.</p>
+			<ul class="small text-muted">
+				<li><strong>Glycerin:</strong> Humectant that attracts moisture to the skin.</li>
+				<li><strong>Emollients:</strong> Soften and smooth the skin surface; used in creams and lotions.</li>
+				<li><strong>Alcohol denat.:</strong> Common in sprays and may be drying; avoid on broken skin.</li>
+				<li><strong>Fragrance:</strong> Adds scent but may irritate sensitive skin; fragrance-free options are available.</li>
+			</ul>
+		</section>
+
+		<section class="container my-5 info-section" id="testimonials">
+			<h3 class="h4 mb-3">Customer testimonials</h3>
+			<div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<div class="p-4 bg-light rounded">
+							<p class="mb-2">"Fast delivery and the lotion really helped my dry skin — highly recommend."</p>
+							<div class="small text-muted">— Aisha, Tamale</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="p-4 bg-light rounded">
+							<p class="mb-2">"Great local stock and friendly service."</p>
+							<div class="small text-muted">— Kwame, Tamale</div>
+						</div>
+					</div>
+						<div class="carousel-item">
+							<div class="p-4 bg-light rounded">
+								<p class="mb-2">"The intensive cream noticeably softened my hands after just two nights."</p>
+								<div class="small text-muted">— Naa, Tamale</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="p-4 bg-light rounded">
+								<p class="mb-2">"Excellent customer service — guided me to the right product for sensitive skin."</p>
+								<div class="small text-muted">— Ibrahim, Tamale</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container my-5 info-section" id="faq">
+			<h3 class="h4 mb-3">FAQ</h3>
+			<div class="accordion" id="faqAccordion">
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="faqOne">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">Do you ship outside Tamale?</button>
+					</h2>
+					<div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+						<div class="accordion-body small text-muted">Yes — we arrange nationwide shipping through trusted couriers. Delivery time depends on location.</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="faqTwo">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">What is your return policy?</button>
+					</h2>
+					<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+						<div class="accordion-body small text-muted">Unopened items may be returned within 7 days for a refund or exchange. Contact us to initiate a return.</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="faqThree">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">Where is the shop located?</button>
+					</h2>
+					<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+						<div class="accordion-body small text-muted">The shop is located opposite the filling station on Vodafone Office Road.</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container my-5 info-section" id="contact-form-section">
+			<h3 class="h4 mb-3">Contact & Orders</h3>
+			<p class="text-muted">Fill the form below or call us at 0557255260. For faster response include product name and preferred pickup/delivery option.</p>
+			<form id="contactForm" class="row g-3">
+				<div class="col-md-4">
+					<input name="name" required class="form-control" placeholder="Your name">
+				</div>
+				<div class="col-md-4">
+					<input name="email" type="email" required class="form-control" placeholder="Email address">
+				</div>
+				<div class="col-md-4">
+					<input name="phone" class="form-control" placeholder="Phone (optional)">
+				</div>
+				<div class="col-12">
+					<textarea name="message" required class="form-control" rows="4" placeholder="Message — include product name and quantity"></textarea>
+				</div>
+				<div class="col-12 text-end">
+					<button class="btn btn-primary" type="submit">Send Message</button>
+				</div>
+			</form>
+		</section>
+
+		<!-- Product Details Modal -->
+		<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="productModalLabel">Product</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="row g-3">
+							<div class="col-md-5">
+								<img id="productModalImg" src="https://via.placeholder.com/800x600" alt="product" class="img-fluid modal-product-img rounded">
+								<div class="mt-2 small text-muted" id="productModalSize"></div>
+							</div>
+							<div class="col-md-7">
+								<h4 id="productModalName">Product name</h4>
+								<p class="price mb-2" id="productModalPrice">GHS 0</p>
+								<p id="productModalDesc" class="text-muted">Description</p>
+								<hr>
+								<div class="product-detail-section">
+									<div class="detail-title">Uses</div>
+									<ul id="productModalUses" class="mb-2"></ul>
+									<div class="detail-title">Effects on skin</div>
+									<p id="productModalEffects" class="mb-2 text-muted"></p>
+									<div class="detail-title">How to use</div>
+									<p id="productModalDirections" class="mb-2 text-muted"></p>
+									<div class="detail-title">Ingredients</div>
+									<p id="productModalIngredients" class="small text-muted mb-3"></p>
+									<div class="mt-3">
+										<a href="#contact" class="btn btn-success me-2">Contact to Buy</a>
+										<button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer id="contact" class="py-4">
+			<div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+				<div>
+					<strong>HAMZA</strong>
+					<div class="small">Tamale, Ghana</div>
+				</div>
+				<div class="text-md-end">
+					<div>Phone: 0557255260</div>
+					<div class="small text-muted">© HAMZA Shoes</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="hamza.js"></script>
+	</body>
+</html>
